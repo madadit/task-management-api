@@ -53,7 +53,7 @@ curl -X POST http://localhost:3000/api/login \
 ### GET /tasks?page=1&limit=10
 
 ````bash
-curl -X GET "http://localhost:3000/tasks?page=1&limit=10" \
+curl -X GET "http://localhost:3000/api/tasks?page=1&limit=10" \
 -H "Authorization: Bearer secret-token-123"
 ````
 
@@ -61,14 +61,14 @@ curl -X GET "http://localhost:3000/tasks?page=1&limit=10" \
 ### GET /tasks/:id
 
 ````bash
-curl -X GET http://localhost:3000/tasks/1 \
+curl -X GET http://localhost:3000/api/tasks/1 \
 -H "Authorization: Bearer secret-token-123"
 ````
 ## Create Task
 ### POST /tasks
 
 ````bash
-curl -X POST http://localhost:3000/tasks \
+curl -X POST http://localhost:3000/api/tasks \
 -H "Content-Type: application/json" \
 -H "Authorization: Bearer secret-token-123" \
 -d '{
@@ -82,7 +82,7 @@ curl -X POST http://localhost:3000/tasks \
 ### PUT /tasks/:id
 
 ````bash
-curl -X PUT http://localhost:3000/tasks/1 \
+curl -X PUT http://localhost:3000/api/tasks/1 \
 -H "Content-Type: application/json" \
 -H "Authorization: Bearer secret-token-123" \
 -d '{
@@ -94,6 +94,6 @@ curl -X PUT http://localhost:3000/tasks/1 \
 ### DELETE /tasks/:id
 
 ````bash
-curl -X DELETE http://localhost:3000/tasks/1 \
+curl -X DELETE http://localhost:3000/api/tasks/1 \
 -H "Authorization: Bearer secret-token-123"
 ````
