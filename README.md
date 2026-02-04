@@ -40,8 +40,8 @@ Or
 
 Copy cURL bellow
 
-- Login
-POST /api/login
+## Login
+# POST /api/login
 curl -X POST http://localhost:3000/api/login \
 -H "Content-Type: application/json" \
 -d '{
@@ -49,20 +49,20 @@ curl -X POST http://localhost:3000/api/login \
   "password": "password"
 }'
 
-- Get Tasks (with Pagination)
-GET /tasks?page=1&limit=10
+## Get Tasks (with Pagination)
+# GET /tasks?page=1&limit=10
 
 curl -X GET "http://localhost:3000/tasks?page=1&limit=10" \
 -H "Authorization: Bearer secret-token-123"
 
-- Get Task by ID
-GET /tasks/:id
+## Get Task by ID
+# GET /tasks/:id
 
 curl -X GET http://localhost:3000/tasks/1 \
 -H "Authorization: Bearer secret-token-123"
 
-- Create Task
-POST /tasks
+## Create Task
+# POST /tasks
 
 curl -X POST http://localhost:3000/tasks \
 -H "Content-Type: application/json" \
@@ -73,9 +73,8 @@ curl -X POST http://localhost:3000/tasks \
   "status": "pending"
 }'
 
-
-- Update Task
-PUT /tasks/:id
+## Update Task
+# PUT /tasks/:id
 
 curl -X PUT http://localhost:3000/tasks/1 \
 -H "Content-Type: application/json" \
@@ -84,8 +83,8 @@ curl -X PUT http://localhost:3000/tasks/1 \
   "status": "done"
 }'
 
-- Delete Task (Soft Delete)
-DELETE /tasks/:id
+## Delete Task (Soft Delete)
+# DELETE /tasks/:id
 
 curl -X DELETE http://localhost:3000/tasks/1 \
 -H "Authorization: Bearer secret-token-123"
