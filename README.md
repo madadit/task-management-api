@@ -41,29 +41,36 @@ Or
 Copy cURL bellow
 
 ## Login
-# POST /api/login
+### POST /api/login
+
+````bash
 curl -X POST http://localhost:3000/api/login \
 -H "Content-Type: application/json" \
 -d '{
   "email": "admin@mail.com",
   "password": "password"
 }'
+````
 
 ## Get Tasks (with Pagination)
-# GET /tasks?page=1&limit=10
+### GET /tasks?page=1&limit=10
 
+````bash
 curl -X GET "http://localhost:3000/tasks?page=1&limit=10" \
 -H "Authorization: Bearer secret-token-123"
+````
 
 ## Get Task by ID
-# GET /tasks/:id
+### GET /tasks/:id
 
+````bash
 curl -X GET http://localhost:3000/tasks/1 \
 -H "Authorization: Bearer secret-token-123"
-
+````
 ## Create Task
-# POST /tasks
+### POST /tasks
 
+````bash
 curl -X POST http://localhost:3000/tasks \
 -H "Content-Type: application/json" \
 -H "Authorization: Bearer secret-token-123" \
@@ -72,19 +79,24 @@ curl -X POST http://localhost:3000/tasks \
   "description": "Build a REST API",
   "status": "pending"
 }'
+````
 
 ## Update Task
-# PUT /tasks/:id
+### PUT /tasks/:id
 
+````bash
 curl -X PUT http://localhost:3000/tasks/1 \
 -H "Content-Type: application/json" \
 -H "Authorization: Bearer secret-token-123" \
 -d '{
   "status": "done"
 }'
+````
 
 ## Delete Task (Soft Delete)
-# DELETE /tasks/:id
+### DELETE /tasks/:id
 
+````bash
 curl -X DELETE http://localhost:3000/tasks/1 \
 -H "Authorization: Bearer secret-token-123"
+````
