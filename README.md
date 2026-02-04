@@ -33,13 +33,10 @@ Authorization: Bearer secret-token-123
 
 ## API SPEC
 
-You can visit link bellow
+You can view the full API documentation via Postman:
 https://documenter.getpostman.com/view/28209155/2sBXc7M4ua
 
-Or
-
-Copy cURL bellow
-
+Alternatively, you can use the cURL examples below.
 ## Login
 ### POST /api/login
 
